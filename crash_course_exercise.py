@@ -14,7 +14,7 @@ def divide(num1, num2):
     except TypeError:
         raise IncorrectInputError("Please enter a numeric value")
     except ZeroDivisionError:
-        raise ValueError("Cannot divide by zero")
+        raise ValueError("You cannot divide by zero. Please enter a number above 0.")
 
 
 # numerator = int(input("Please enter your numerator: "))
