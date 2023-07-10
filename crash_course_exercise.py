@@ -8,13 +8,13 @@ class IncorrectInputError(Exception):
     pass
 def divide(num1, num2):
     try:
-        is_int = num1 / num2
         total = num1/num2
         print(total)
         return total
     except TypeError:
-        raise IncorrectInputError("Enter numbers, not words")
-
+        raise IncorrectInputError("Please enter a numeric value")
+    except ZeroDivisionError:
+        raise ValueError("Cannot divide by zero")
 
 
 # numerator = int(input("Please enter your numerator: "))
