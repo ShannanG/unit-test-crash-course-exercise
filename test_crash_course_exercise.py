@@ -13,3 +13,11 @@ class MainTestCase(unittest.TestCase):
     def test_divide_boundary_string3_integer2(self):
         with self.assertRaises(IncorrectInputError):
             divide("3", 2)
+
+    # boundary case - testing whether the program handles floats correctly
+    def test_divide_boundary_float375_2(self):
+        self.assertEqual(1.875, divide(3.75, 2))
+
+    # boundary case - testing whether program can handle dividing a large num by a tiny float num
+    def test_divide_boundary_3mil_float01(self):
+        self.assertEqual(3000000000, divide(300000000, 0.1))        
