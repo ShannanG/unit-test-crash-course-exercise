@@ -10,6 +10,11 @@ class MainTestCase(unittest.TestCase):
         with self.assertRaises(IncorrectInputError):
             divide("3", "2")
 
+    # invalid case - testing to check a ZeroDivisionError is raised with a custom message
+    def test_divide_invalid_3_0(self):
+        with self.assertRaises(ZeroDivisionError):
+            divide(3, 0)
+
     def test_divide_boundary_string3_integer2(self):
         with self.assertRaises(IncorrectInputError):
             divide("3", 2)
